@@ -16,7 +16,7 @@ switch ($javaVersion) {
 	"Java 14" { $env:JAVA_HOME = "C:\Program Files\Java\jdk-14.0.2" }
 	"Java 15" { $env:JAVA_HOME = "C:\Program Files\Java\jdk-15.0.2" }
 	"Java 16" { $env:JAVA_HOME = "C:\Program Files\Java\jdk-16.0.2" }
-	"Java 17" { $env:JAVA_HOME = "C:\Program Files\Java\jdk-17.0.6+10" }
+	"Java 17" { $env:JAVA_HOME = "C:\Program Files\Java\jdk-17" }
 	"Java 18" { $env:JAVA_HOME = "C:\Program Files\Java\jdk-18" }
 	"Java 19" { $env:JAVA_HOME = "C:\Program Files\Java\jdk-19" }
 	"Java 20" { $env:JAVA_HOME = "C:\Program Files\Java\jdk-20" }
