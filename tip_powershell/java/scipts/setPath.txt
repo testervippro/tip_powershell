@@ -1,0 +1,18 @@
+
+#run admin 
+#Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser 
+#close seccion 
+#re openrun admin 
+#check java17 perm
+
+# Define the new path you want to set
+$newPath = "C:\Program Files\Java\scripts"
+
+# Overwrite the current Path variable
+[System.Environment]::SetEnvironmentVariable("Path", $newPath, [System.EnvironmentVariableTarget]::Machine)
+
+Write-Output "Path has been set to '$newPath'."
+
+# Verify the change
+$updatedPath = [System.Environment]::GetEnvironmentVariable("Path", [System.EnvironmentVariableTarget]::Machine)
+Write-Output "Current Path: $updatedPath"
