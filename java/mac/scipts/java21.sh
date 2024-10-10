@@ -1,0 +1,1 @@
+javaX.sh "Java 21" $1

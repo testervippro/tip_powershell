@@ -1,0 +1,18 @@
+# Step 1: Open terminal and edit the shell configuration file
+# For bash (older macOS versions), use:
+
+nano ~/.bash_profile
+
+# For zsh (newer macOS versions), use:
+nano ~/.zshrc
+
+# Step 2: Add this line to the end of the file (replace /path/to/scripts with your actual directory)
+export PATH="/path/to/scripts:$PATH"
+
+# Example:
+# export PATH="~/java_scripts:$PATH"
+
+# Step 3: Save the file and exit nano (Ctrl + X, then Y to confirm)
+
+# Step 4: Reload the profile to apply the changes:
+source ~/.bash_profile  # or source ~/.zshrc
