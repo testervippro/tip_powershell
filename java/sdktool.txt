@@ -1,0 +1,3 @@
+$path = [System.Environment]::GetEnvironmentVariable("Path", [System.EnvironmentVariableTarget]::Machine)
+$newPath = "$path;C:\Program Files\platform-tools"
+[System.Environment]::SetEnvironmentVariable("Path", $newPath, [System.EnvironmentVariableTarget]::Machine)
