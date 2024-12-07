@@ -22,5 +22,7 @@ $path += ";C:\Program Files\Java\jdk-17\bin"  # Adjust path if necessary
 [System.Environment]::SetEnvironmentVariable("Path", $path, "Machine")
 
 # Output confirmation
-Write-Host "JDK 17 installation completed and environment variables set."
+Write-Host "Java Home"
+[System.Environment]::GetEnvironmentVariable("JAVA_HOME", "Machine")
+
 
