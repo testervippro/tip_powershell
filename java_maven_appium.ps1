@@ -1,4 +1,9 @@
-# run with admin permission
+# Run with admin permission
+#  Get-ExecutionPolicy should return Unrestricted
+# If the policy is set to Restricted or AllSigned, you may need to change it to RemoteSigned or
+# Unrestricted to run your script. You can change it with
+# If the policy is set to Restricted or AllSigned, you may need to change it to RemoteSigned or Unrestricted to run your script.
+# You can change it wit
 # Define the download URL and the path to save the installer
 $url = "https://download.oracle.com/java/17/archive/jdk-17.0.12_windows-x64_bin.exe" 
 $outputPath = "C:\Users\ad\Downloads\jdk-17-installer.exe"
