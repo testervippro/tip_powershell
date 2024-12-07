@@ -62,3 +62,5 @@ if ($mavenVersionOutput) {
 } else {
     Write-Host "Maven installation failed."
 }
+
+
