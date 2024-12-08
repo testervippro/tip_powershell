@@ -1,11 +1,12 @@
 # Run with admin permission
-#  Get-ExecutionPolicy should return Unrestricted
+# Get-ExecutionPolicy should return Unrestricted
 # If the policy is set to Restricted or AllSigned, you may need to change it to RemoteSigned or
 # Unrestricted to run your script. You can change it with
 # If the policy is set to Restricted or AllSigned, you may need to change it to RemoteSigned or Unrestricted to run your script.
 # You can change it wit
 # Define the download URL and the path to save the installer
 $url = "https://download.oracle.com/java/17/archive/jdk-17.0.12_windows-x64_bin.exe" 
+# Base on path of your local
 $outputPath = "C:\Users\ad\Downloads\jdk-17-installer.exe"
 
 # Download the JDK installer
@@ -68,7 +69,7 @@ if ($mavenVersionOutput) {
     Write-Host "Maven installation failed."
 }
 
-# Android Home
+# Android Home if now dont need pls cmt this script
 # Set ANDROID_HOME for the current session
 $env:ANDROID_HOME = "C:\Users\ad\AppData\Local\Android\Sdk"
 
