@@ -77,7 +77,7 @@ $env:ANDROID_HOME = "C:\Users\ad\AppData\Local\Android\Sdk"
 $env:Path += ";$env:ANDROID_HOME\tools;$env:ANDROID_HOME\platform-tools"
 
 # Make the changes persistent
-[System.Environment]::SetEnvironmentVariable('ANDROID_HOME', 'C:\path\to\your\android\sdk', [System.EnvironmentVariableTarget]::User)
+[System.Environment]::SetEnvironmentVariable('ANDROID_HOME', 'C:\Users\ad\AppData\Local\Android\Sdk', [System.EnvironmentVariableTarget]::User)
 [System.Environment]::SetEnvironmentVariable('Path', 
     [System.Environment]::GetEnvironmentVariable('Path', [System.EnvironmentVariableTarget]::User) + ";C:\path\to\your\android\sdk\tools;C:\path\to\your\android\sdk\platform-tools", 
     [System.EnvironmentVariableTarget]::User)
