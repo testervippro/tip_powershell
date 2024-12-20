@@ -26,3 +26,6 @@ if ($JenkinsReady) {
 } else {
     Write-Host "Jenkins did not start within the expected time frame."
 }
+#delete war file then 
+# rmdir /s /q "%USERPROFILE%\.jenkins"
+
