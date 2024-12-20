@@ -29,4 +29,5 @@ if ($JenkinsReady) {
 }
 #delete war file then 
 # rmdir /s /q "%USERPROFILE%\.jenkins"
+#open after install
 
