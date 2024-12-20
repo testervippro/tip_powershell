@@ -15,14 +15,14 @@ $StartTime = (Get-Date).Ticks
 
 Do {
     Start-Sleep -Seconds 10  # Check every 10 seconds
-    $JenkinsReady = (Test-Connection -ComputerName localhost -Port 8080 -Count 1 -ErrorAction SilentlyContinue)
+    $JenkinsReady = (Test-NetConnection -ComputerName localhost -Port 8080 -ErrorAction SilentlyContinue)
 
     $CurrentTime = (Get-Date).Ticks
     $ElapsedTime = [math]::Floor(($CurrentTime - $StartTime) / [timespan]::FromSeconds(1).Ticks)
 } until ($JenkinsReady -or $ElapsedTime -ge $MaxWaitTime)
 
 if ($JenkinsReady) {
-    Invoke-WebRequest -Uri "http://localhost:8080" -UseBasicParsing
+    Start-Process -FilePath "http://localhost:8080"
 } else {
     Write-Host "Jenkins did not start within the expected time frame."
 }
