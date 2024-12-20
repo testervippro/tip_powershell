@@ -6,7 +6,9 @@ $DownloadPath = Join-Path -Path ([Environment]::GetFolderPath("UserProfile")) -C
 Invoke-WebRequest -Uri $JenkinsURL -OutFile $DownloadPath -UseBasicParsing
 
 # Start Jenkins with admin credentials
-Start-Process "java" -ArgumentList "-jar `"$DownloadPath`" --argumentsRealm.passwd.admin=admin --argumentsRealm.roles.admin=admin" -NoNewWindow
+#
+Start-Process "java" -ArgumentList "-jar `$DownloadPath --argumentsRealm.roles.admin=admin" -NoNewWindow
+
 
 # Wait for Jenkins to start and open the setup page
 $JenkinsReady = $false
