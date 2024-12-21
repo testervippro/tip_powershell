@@ -2,12 +2,14 @@
 $JenkinsURL = "https://get.jenkins.io/war-stable/latest/jenkins.war"
 $DownloadPath = Join-Path -Path ([Environment]::GetFolderPath("UserProfile")) -ChildPath "Downloads\jenkins.war"
 
-# Download Jenkins WAR file
-Invoke-WebRequest -Uri $JenkinsURL -OutFile $DownloadPath -UseBasicParsing
+# Check if the Jenkins WAR file already exists
+if (-not (Test-Path $DownloadPath)) {
+    # Download Jenkins WAR file
+    Invoke-WebRequest -Uri $JenkinsURL -OutFile $DownloadPath -UseBasicParsing
+}
 
 # Start Jenkins with admin credentials
 Start-Process "java" -ArgumentList "-jar `"$DownloadPath`" --argumentsRealm.passwd.admin=admin --argumentsRealm.roles.admin=admin" -NoNewWindow
-
 
 # Wait for Jenkins to start and open the setup page
 $JenkinsReady = $false
@@ -27,7 +29,6 @@ if ($JenkinsReady) {
 } else {
     Write-Host "Jenkins did not start within the expected time frame."
 }
-#delete war file then 
-# rmdir /s /q "%USERPROFILE%\.jenkins"
-#open after install
 
+# Delete WAR file if necessary
+# rmdir /s /q "%USERPROFILE%\.jenkins"
